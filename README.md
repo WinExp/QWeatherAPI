@@ -12,14 +12,14 @@ QWeatherAPI 是一个可以查询和风天气的 “实时天气” 和 “城�
 
 `using QWeatherAPI;`
 
-### GetRealTimeWeatherAsync
+### GetRealTimeWeatherAsync()
 #### 使用方法
 `await QWeatherAPI.QWeather.GetRealTimeWeatherAsync(locationInfo.Lon, locationInfo.Lat, "af71f6c5c1e94ec4abf618febf35ca68");`
 
 #### 参数
 `GetRealTimeWeatherAsync(double lon, double lat, string key, string unit = "m", string lang = "zh")`
 
-### GetGeoAsync
+### GetGeoAsync()
 #### 使用方法
 `await QWeatherAPI.QWeather.GetGeoAsync(location, key);`
 
