@@ -12,29 +12,27 @@ QWeatherAPI 是一个可以查询和风天气的 “实时天气” 和 “城�
 
 `using QWeatherAPI;`
 
-### API 方法
-#### GetRealTimeWeatherAsync
-##### 使用方法
+### GetRealTimeWeatherAsync
+#### 使用方法
 `await QWeatherAPI.QWeather.GetRealTimeWeatherAsync(locationInfo.Lon, locationInfo.Lat, "af71f6c5c1e94ec4abf618febf35ca68");`
 
-##### 参数
+#### 参数
 `GetRealTimeWeatherAsync(double lon, double lat, string key, string unit = "m", string lang = "zh")`
 
-#### GetGeoAsync
-##### 使用方法
+### GetGeoAsync
+#### 使用方法
 `await QWeatherAPI.QWeather.GetGeoAsync(location, key);`
 
-##### 参数
+#### 参数
 1.`GetGeoAsync(string location, string key, string adm, string range = "world", int limit = 10, string lang = "zh")`
 
 2.`GetGeoAsync(string location, string key, string range = "world", int limit = 10, string lang = "zh")`
 
-#### 更多方法等待更新...
+### 更多方法等待更新...
 
-#### 你也可以向我提交 Issues 或者 Pull requests 来表达你的意见。
+### 你也可以向我提交 Issues 或者 Pull requests 来表达你的意见。
 
-## 开源协议
-### MIT
+## MIT 开源协议
 MIT License
 
 Copyright (c) 2022 WinExp
