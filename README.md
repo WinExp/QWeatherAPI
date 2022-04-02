@@ -3,7 +3,7 @@
 QWeatherAPI 是一个可以查询和风天气的 “实时天气” 和 “城市信息查询” 的API。
 
 ## 实例应用
-请在 “src/ExampleApp” 目录下查看。
+请在 **[src/ExampleApp](https://github.com/WinExp/QWeatherAPI/tree/master/src/ExampleApp "演示应用")** 目录下查看。
 
 ## 使用方法
 1.在项目或在该项目的 Nuget 包管理器内引用该项目。
