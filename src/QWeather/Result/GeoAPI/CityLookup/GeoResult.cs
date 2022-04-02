@@ -17,7 +17,7 @@ namespace QWeatherAPI.Result.GeoAPI.CityLookup
         /// <summary>
         /// 位置搜索结果
         /// </summary>
-        public List<Location> Locations = new List<Location>();
+        public Location[] Locations = Array.Empty<Location>();
         #endregion
 
         #region 构造方法
@@ -33,7 +33,9 @@ namespace QWeatherAPI.Result.GeoAPI.CityLookup
             if (this.Code != "200") { throw new ArgumentException(this.Code); }
             foreach (JToken location in jsonData.SelectToken("location"))
             {
-                this.Locations.Add(new Location(location));
+                var locationList = this.Locations.ToList();
+                locationList.Add(new Location(location));
+                this.Locations = locationList.ToArray();
             }
         }
         #endregion

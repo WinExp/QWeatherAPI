@@ -4,19 +4,31 @@
     {
         static void Main()
         {
+            GetWeatherAsync().Wait();
+        }
+
+        private static async Task GetWeatherAsync()
+        {
             Console.Write("请输入 API 密钥：");
             string key = Console.ReadLine();
             Console.Write("请输入地点名称：");
             string location = Console.ReadLine();
             try
             {
-                var locationInfo = QWeatherAPI.QWeather.GetGeoAsync(location, key).Result.Locations[0];
-                var weatherInfo = QWeatherAPI.QWeather.GetRealTimeWeatherAsync(locationInfo.Lon, locationInfo.Lat, "af71f6c5c1e94ec4abf618febf35ca68").Result;
-                Console.WriteLine(@$"{locationInfo.Name}的天气
-当前温度 {weatherInfo.Now.Temp}°C
-体感温度 {weatherInfo.Now.FeelsLike}°C
-{weatherInfo.Now.Text}
-{weatherInfo.Now.WindDir}");
+                var locationInfo = (await QWeatherAPI.GeoAPI.GetGeoAsync(location, key)).Locations[0];
+                var realTimeWeatherInfo = await QWeatherAPI.RealTimeWeatherAPI.GetRealTimeWeatherAsync(locationInfo.Lon, locationInfo.Lat, key);
+                var forecastWeatherInfo = await QWeatherAPI.WeatherHourlyForecastAPI.GetHourlyForecastWeatherAsync(locationInfo.Lon, locationInfo.Lat, key);
+                Console.WriteLine(@$"{locationInfo.Name} 的天气
+当前温度 {realTimeWeatherInfo.Now.Temp}°C
+体感温度 {realTimeWeatherInfo.Now.FeelsLike}°C
+{realTimeWeatherInfo.Now.Text}
+{realTimeWeatherInfo.Now.WindDir}
+
+明天 {forecastWeatherInfo.Hourly[23].FxTime} 的天气
+温度 {forecastWeatherInfo.Hourly[23].Temp}
+{forecastWeatherInfo.Hourly[23].Text}
+{forecastWeatherInfo.Hourly[23].WindDir}
+");
             }
             catch (ArgumentException ex)
             {

@@ -1,4 +1,4 @@
-# QWeather
+# QWeatherAPI
 ## 简介
 QWeatherAPI 是一个可以查询和风天气的 “实时天气” 和 “城市信息查询” 的API。
 
