@@ -14,19 +14,30 @@ QWeatherAPI 是一个可以查询和风天气的 “实时天气” 和 “城�
 
 ### GetRealTimeWeatherAsync()
 #### 使用方法
-`await QWeatherAPI.QWeather.GetRealTimeWeatherAsync(locationInfo.Lon, locationInfo.Lat, "af71f6c5c1e94ec4abf618febf35ca68");`
+`await QWeatherAPI.RealTimeWeatherAPI.GetRealTimeWeatherAsync(arguments);`
 
 #### 参数
-`GetRealTimeWeatherAsync(double lon, double lat, string key, string unit = "m", string lang = "zh")`
+1.`GetRealTimeWeatherAsync(double lon, double lat, string key, Units unit = Units.Metric, string lang = "zh")`
+
+2.`GetRealTimeWeatherAsync(string id, string key, Units unit = Units.Metric, string lang = "zh")`
 
 ### GetGeoAsync()
 #### 使用方法
-`await QWeatherAPI.QWeather.GetGeoAsync(location, key);`
+`await QWeatherAPI.GeoAPI.GetGeoAsync(arguments);`
 
 #### 参数
 1.`GetGeoAsync(string location, string key, string adm, string range = "world", int limit = 10, string lang = "zh")`
 
 2.`GetGeoAsync(string location, string key, string range = "world", int limit = 10, string lang = "zh")`
+
+### GetHourlyForecastWeatherAsync()
+#### 使用方法
+`await QWeatherAPI.WeatherHourlyForecastAPI.GetHourlyForecastWeatherAsync(arguments)`
+
+#### 参数
+1.`GetHourlyForecastWeatherAsync(double lon, double lat, string key, Units unit = Units.Metric, string lang = "zh")`
+
+2.`GetHourlyForecastWeatherAsync(string id, string key, Units unit = Units.Metric, string lang = "zh")`
 
 ### 更多方法等待更新...
 
