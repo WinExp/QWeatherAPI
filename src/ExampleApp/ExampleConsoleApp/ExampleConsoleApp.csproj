@@ -12,7 +12,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\QWeather\QWeatherAPI.csproj" />
+    <ProjectReference Include="..\..\QWeatherAPI\QWeatherAPI.csproj" />
   </ItemGroup>
 
 </Project>

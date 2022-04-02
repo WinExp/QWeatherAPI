@@ -9,7 +9,7 @@
     <Authors>WindowsExplorer</Authors>
     <Description>可获取和风天气 API 数据。</Description>
     <Copyright>WindowsExplorer</Copyright>
-    <PackageIcon>天气 (3).png</PackageIcon>
+    <PackageIcon>PackIcon.png</PackageIcon>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <AssemblyVersion>1.1.0.*</AssemblyVersion>
@@ -20,10 +20,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="..\..\..\..\..\..\..\..\Downloads\天气 (3).png">
+    <None Remove="PackIcon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="PackIcon.png">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
-    </None>
+    </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>
