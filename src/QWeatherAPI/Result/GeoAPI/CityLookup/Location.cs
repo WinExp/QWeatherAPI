@@ -9,7 +9,6 @@ namespace QWeatherAPI.Result.GeoAPI.CityLookup
 {
     public class Location
     {
-        #region 声明字段
         /// <summary>
         /// 地区/城市名称
         /// </summary>
@@ -58,9 +57,7 @@ namespace QWeatherAPI.Result.GeoAPI.CityLookup
         /// 地区评分
         /// </summary>
         public string Rank;
-        #endregion
 
-        #region 构造方法
         public Location(JToken token)
         {
             this.Name = token.Value<string>("name");
@@ -83,6 +80,5 @@ namespace QWeatherAPI.Result.GeoAPI.CityLookup
             this.Type = token.Value<string>("type");
             this.Rank = token.Value<string>("rank");
         }
-        #endregion
     }
 }

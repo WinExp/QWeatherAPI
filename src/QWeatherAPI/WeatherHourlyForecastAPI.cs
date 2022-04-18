@@ -11,7 +11,6 @@ namespace QWeatherAPI
 {
     public static class WeatherHourlyForecastAPI
     {
-        #region 获取 24 小时天气预报方法
         /// <summary>
         /// 通过经度，纬度获取 24 小时天气预报 API 数据。
         /// </summary>
@@ -36,7 +35,8 @@ namespace QWeatherAPI
                 default:
                     goto case Units.Metric;
             }
-            string jsonData = await WebRequests.GetRequestAsync($"https://devapi.qweather.com/v7/weather/24h?location={lon},{lat}&lang={lang}&unit={_unit}&key={key}");
+            var response = await WebRequests.GetRequestAsync($"https://devapi.qweather.com/v7/weather/24h?location={lon},{lat}&lang={lang}&unit={_unit}&key={key}");
+            string jsonData = await response.Content.ReadAsStringAsync();
             var weather = new WeatherResult(jsonData);
             return weather;
         }
@@ -64,10 +64,10 @@ namespace QWeatherAPI
                 default:
                     goto case Units.Metric;
             }
-            string jsonData = await WebRequests.GetRequestAsync($"https://devapi.qweather.com/v7/weather/24h?location={id}&lang={lang}&unit={_unit}&key={key}");
+            var response = await WebRequests.GetRequestAsync($"https://devapi.qweather.com/v7/weather/24h?location={id}&lang={lang}&unit={_unit}&key={key}");
+            string jsonData = await response.Content.ReadAsStringAsync();
             var weather = new WeatherResult(jsonData);
             return weather;
         }
-        #endregion
     }
 }

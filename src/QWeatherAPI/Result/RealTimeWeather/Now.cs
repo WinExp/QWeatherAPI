@@ -9,7 +9,6 @@ namespace QWeatherAPI.Result.RealTimeWeather
 {
     public class Now
     {
-        #region 声明字段
         /// <summary>
         /// 更新时间
         /// </summary>
@@ -70,9 +69,7 @@ namespace QWeatherAPI.Result.RealTimeWeather
         /// 露点温度（可能为空）
         /// </summary>
         public string Dew;
-        #endregion
 
-        #region 构造方法
         public Now(JToken token)
         {
             this.ObsTime = token.Value<string>("obsTime");
@@ -91,6 +88,5 @@ namespace QWeatherAPI.Result.RealTimeWeather
             this.Cloud = token.Value<string?>("cloud");
             this.Dew = token.Value<string?>("dew");
         }
-        #endregion
     }
 }

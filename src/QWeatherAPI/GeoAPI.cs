@@ -10,7 +10,6 @@ namespace QWeatherAPI
 {
     public class GeoAPI
     {
-        #region 获取城市地理信息方法
         /// <summary>
         /// 通过地区名称获取 LocationID 和 经纬度。
         /// </summary>
@@ -24,7 +23,8 @@ namespace QWeatherAPI
         public static async Task<GeoResult> GetGeoAsync(string location, string key, string adm, string range = "world", int limit = 10, string lang = "zh")
         {
             range = range.ToLower();
-            string jsonData = await WebRequests.GetRequestAsync($"https://geoapi.qweather.com/v2/city/lookup?location={location}&number={limit}&adm={adm}&range={range}&lang={lang}&key={key}");
+            var response = await WebRequests.GetRequestAsync($"https://geoapi.qweather.com/v2/city/lookup?location={location}&number={limit}&adm={adm}&range={range}&lang={lang}&key={key}");
+            string jsonData = await response.Content.ReadAsStringAsync();
             return new GeoResult(jsonData);
         }
 
@@ -40,9 +40,9 @@ namespace QWeatherAPI
         public static async Task<GeoResult> GetGeoAsync(string location, string key, string range = "world", int limit = 10, string lang = "zh")
         {
             range = range.ToLower();
-            string jsonData = await WebRequests.GetRequestAsync($"https://geoapi.qweather.com/v2/city/lookup?location={location}&number={limit}&range={range}&lang={lang}&key={key}");
+            var response = await WebRequests.GetRequestAsync($"https://geoapi.qweather.com/v2/city/lookup?location={location}&number={limit}&range={range}&lang={lang}&key={key}");
+            string jsonData = await response.Content.ReadAsStringAsync();
             return new GeoResult(jsonData);
         }
-        #endregion
     }
 }

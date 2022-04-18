@@ -9,13 +9,12 @@ namespace QWeatherAPI.Result.WeatherHourlyForecast
 {
     public class WeatherResult
     {
-        #region 声明字段
         /// <summary>
         /// API 状态码
         /// </summary>
         public string Code;
         /// <summary>
-        /// API 最近更新时间
+        /// API 状态最近更新时间
         /// </summary>
         public string UpdateTime;
         /// <summary>
@@ -26,9 +25,7 @@ namespace QWeatherAPI.Result.WeatherHourlyForecast
         /// 24 小时预报结果
         /// </summary>
         public Hourly[] Hourly = Array.Empty<Hourly>();
-        #endregion
 
-        #region 构造方法
         /// <summary>
         /// 构造 24 天气预报 API 返回结果
         /// </summary>
@@ -48,6 +45,5 @@ namespace QWeatherAPI.Result.WeatherHourlyForecast
                 this.Hourly = hourlyList.ToArray();
             }
         }
-        #endregion
     }
 }

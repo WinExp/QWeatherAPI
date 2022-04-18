@@ -11,9 +11,8 @@ namespace QWeatherAPI
 {
     public static class RealTimeWeatherAPI
     {
-        #region 获取实时天气方法
         /// <summary>
-        /// 通过经度，纬度获取实时天气 API 数据。
+        /// 通过经度，纬度获取和风天气实时天气 API 数据。
         /// </summary>
         /// <param name="lon">地区经度。</param>
         /// <param name="lat">地区纬度。</param>
@@ -35,7 +34,8 @@ namespace QWeatherAPI
                 default:
                     goto case Units.Metric;
             }
-            string jsonData = await WebRequests.GetRequestAsync($"https://devapi.qweather.com/v7/weather/now?location={lon},{lat}&lang={lang}&unit={_unit}&key={key}");
+            var response = await WebRequests.GetRequestAsync($"https://devapi.qweather.com/v7/weather/now?location={lon},{lat}&lang={lang}&unit={_unit}&key={key}");
+            string jsonData = await response.Content.ReadAsStringAsync();
             var weather = new WeatherResult(jsonData);
             return weather;
         }
@@ -62,10 +62,10 @@ namespace QWeatherAPI
                 default:
                     goto case Units.Metric;
             }
-            string jsonData = await WebRequests.GetRequestAsync($"https://devapi.qweather.com/v7/weather/now?location={id}&lang={lang}&unit={_unit}&key={key}");
+            var response = await WebRequests.GetRequestAsync($"https://devapi.qweather.com/v7/weather/now?location={id}&lang={lang}&unit={_unit}&key={key}");
+            string jsonData = await response.Content.ReadAsStringAsync();
             var weather = new WeatherResult(jsonData);
             return weather;
         }
-        #endregion
     }
 }

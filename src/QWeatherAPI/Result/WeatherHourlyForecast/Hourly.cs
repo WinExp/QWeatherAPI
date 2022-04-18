@@ -1,10 +1,10 @@
 ﻿using Newtonsoft.Json.Linq;
+using QWeatherAPI.Result.Share;
 
 namespace QWeatherAPI.Result.WeatherHourlyForecast
 {
     public class Hourly
     {
-        #region 声明字段
         /// <summary>
         /// 更新时间
         /// </summary>
@@ -32,7 +32,7 @@ namespace QWeatherAPI.Result.WeatherHourlyForecast
         /// <summary>
         /// 风力等级
         /// </summary>
-        public string WindScale;
+        public WindScale WindScale;
         /// <summary>
         /// 风速，公里/小时
         /// </summary>
@@ -61,9 +61,7 @@ namespace QWeatherAPI.Result.WeatherHourlyForecast
         /// 露点温度（可能为空）
         /// </summary>
         public string Dew;
-        #endregion
 
-        #region 构造方法
         public Hourly(JToken token)
         {
             this.FxTime = token.Value<string>("fxTime");
@@ -72,7 +70,7 @@ namespace QWeatherAPI.Result.WeatherHourlyForecast
             this.Text = token.Value<string>("text");
             this.Wind360 = token.Value<string>("wind360");
             this.WindDir = token.Value<string>("windDir");
-            this.WindScale = token.Value<string>("windScale");
+            this.WindScale = new WindScale(token.Value<string>("windScale"));
             this.WindSpeed = token.Value<string>("windSpeed");
             this.Humidity = token.Value<string>("humidity");
             this.Pop = token.Value<string>("pop");
@@ -81,6 +79,5 @@ namespace QWeatherAPI.Result.WeatherHourlyForecast
             this.Cloud = token.Value<string?>("cloud");
             this.Dew = token.Value<string?>("dew");
         }
-        #endregion
     }
 }

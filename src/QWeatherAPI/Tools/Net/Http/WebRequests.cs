@@ -1,40 +1,25 @@
-﻿using System.Net;
+using System.Net.Http;
 using System.Text;
 
 namespace QWeatherAPI.Tools.Net.Http
 {
     internal static class WebRequests
     {
-        #region Http 请求方法
-        internal static async Task<string> GetRequestAsync(string Url)
+        // Get 请求
+        internal static async Task<HttpResponseMessage> GetRequestAsync(string Url, HttpMessageHandler handler = null)
         {
             Url = Url.Trim();
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(Url);
-            request.Proxy = null;
-            request.KeepAlive = false;
-            request.Method = "GET";
-            request.ContentType = "application/json; charset=UTF-8";
-            request.AutomaticDecompression = DecompressionMethods.GZip;
-
-            HttpWebResponse response = (HttpWebResponse)await request.GetResponseAsync();
-            using (Stream myResponseStream = response.GetResponseStream())
+            if (handler == null)
             {
-                using (StreamReader myStreamReader = new StreamReader(myResponseStream, Encoding.UTF8))
+                handler = new HttpClientHandler()
                 {
-                    string retString = myStreamReader.ReadToEnd();
-                    if (response != null)
-                    {
-                        response.Close();
-                    }
-                    if (request != null)
-                    {
-                        request.Abort();
-                    }
-
-                    return retString;
-                }
+                    AutomaticDecompression = System.Net.DecompressionMethods.GZip
+                };
+            }
+            using (HttpClient client = new HttpClient(handler))
+            {
+                return await client.GetAsync(Url);
             }
         }
-        #endregion
     }
 }

@@ -9,7 +9,6 @@ namespace QWeatherAPI.Result.RealTimeWeather
 {
     public class WeatherResult
     {
-        #region 声明字段
         /// <summary>
         /// API 状态码
         /// </summary>
@@ -26,9 +25,7 @@ namespace QWeatherAPI.Result.RealTimeWeather
         /// 天气数据
         /// </summary>
         public Now Now;
-        #endregion
 
-        #region 构造方法
         /// <summary>
         /// 构造当前天气 API 返回结果
         /// </summary>
@@ -43,6 +40,5 @@ namespace QWeatherAPI.Result.RealTimeWeather
             this.FxLink = jsonData.Value<string>("fxLink");
             this.Now = new Now(jsonData.SelectToken("now"));
         }
-        #endregion
     }
 }

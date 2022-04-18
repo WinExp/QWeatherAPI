@@ -39,6 +39,15 @@ QWeatherAPI 是一个可以查询和风天气的 “实时天气” 和 “城�
 
 2.`GetHourlyForecastWeatherAsync(string id, string key, Units unit = Units.Metric, string lang = "zh")`
 
+### GetWeatherDailyForecastAsync()
+#### 使用方法
+`await QWeatherAPI.WeatherDailyForecastAPI.GetWeatherDailyForecastAsync(arguments)`
+
+#### 参数
+1.`GetWeatherDailyForecastAsync(string id, string key, string lang = "zh", Units unit = Units.Metric, DailyCount dailyCount = DailyCount._3Day)`
+
+2.`GetWeatherDailyForecastAsync(double lon, double lat, string key, string lang = "zh", Units unit = Units.Metric, DailyCount dailyCount = DailyCount._3Day)`
+
 ### 更多方法等待更新...
 
 ### 你也可以向我提交 Issues 或者 Pull requests 来表达你的意见。
