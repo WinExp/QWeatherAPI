@@ -14,7 +14,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{5A663551-0169-4533-B9A8-EDC059068521}"
 	ProjectSection(SolutionItems) = preProject
 		docs\Nuget-README-1.1.0.md = docs\Nuget-README-1.1.0.md
-		Nuget-README-1.2.0.md = Nuget-README-1.2.0.md
+		docs\Nuget-README-1.2.0.md = docs\Nuget-README-1.2.0.md
 		README.md = README.md
 	EndProjectSection
 EndProject
