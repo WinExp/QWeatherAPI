@@ -1,8 +1,8 @@
 # QWeather
-## 1.2.0 ÖØÒªÌáÊ¾
-**´Ó Release 1.1.0 ¿ªÊ¼µ÷ÓÃ API µÄ·½·¨·¢Éú¸Ä±ä£¬Çë¸ù¾İÎÒÃÇµÄ [README](https://github.com/WinExp/QWeatherAPI/blob/master/README.md "README") À´¸ü¸Ä¡£**
-## ¼ò½é
-QWeatherAPI ÊÇÒ»¸ö¿ÉÒÔ²éÑ¯ºÍ·çÌìÆø API µÄ¿ªÔ´ÏîÄ¿¡£
+## 1.2.0 é‡è¦æç¤º
+**ä» Release 1.1.0 å¼€å§‹è°ƒç”¨ API çš„æ–¹æ³•å‘ç”Ÿæ”¹å˜ï¼Œè¯·æ ¹æ®æˆ‘ä»¬çš„ [README](https://github.com/WinExp/QWeatherAPI/blob/master/README.md "README") æ¥æ›´æ”¹ã€‚**
+## ç®€ä»‹
+QWeatherAPI æ˜¯ä¸€ä¸ªå¯ä»¥æŸ¥è¯¢å’Œé£å¤©æ°” API çš„å¼€æºé¡¹ç›®ã€‚
 
-## ÆäËû
-ÇëÈ¥±¾ÏîÄ¿µÄ **[Github&nbsp;¿â](https://github.com/WinExp/QWeatherAPI "QWeatherAPI")** ²é¿´ÏêÇé¡£
+## å…¶ä»–
+è¯·å»æœ¬é¡¹ç›®çš„ **[Github&nbsp;åº“](https://github.com/WinExp/QWeatherAPI "QWeatherAPI")** æŸ¥çœ‹è¯¦æƒ…ã€‚
