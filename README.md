@@ -1,6 +1,6 @@
 # QWeatherAPI
 ## 简介
-QWeatherAPI 是一个可以查询和风天气的 “实时天气” 和 “城市信息查询” 的API。
+QWeatherAPI 是一个可以查询和风天气 API 的开源项目。
 
 ## 实例应用
 请在 **[src/ExampleApp](https://github.com/WinExp/QWeatherAPI/tree/master/src/ExampleApp "演示应用")** 目录下查看。
