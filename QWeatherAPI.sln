@@ -9,14 +9,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ExampleApp", "ExampleApp", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExampleConsoleApp", "src\ExampleApp\ExampleConsoleApp\ExampleConsoleApp.csproj", "{ADB86DF0-98EF-4673-83AC-328B9B5F1D6A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QWeatherAPI", "src\QWeatherAPI\QWeatherAPI.csproj", "{D41C1F5C-0540-48A0-B906-16742A22B5F4}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{5A663551-0169-4533-B9A8-EDC059068521}"
 	ProjectSection(SolutionItems) = preProject
 		docs\Nuget-README-1.1.0.md = docs\Nuget-README-1.1.0.md
 		docs\Nuget-README-1.2.0.md = docs\Nuget-README-1.2.0.md
+		docs\Nuget-README-1.3.0.md = docs\Nuget-README-1.3.0.md
 		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QWeatherAPI", "src\QWeatherAPI\QWeatherAPI.csproj", "{91F42036-AABB-4A41-841E-D2DCD887876D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -28,10 +29,10 @@ Global
 		{ADB86DF0-98EF-4673-83AC-328B9B5F1D6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ADB86DF0-98EF-4673-83AC-328B9B5F1D6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ADB86DF0-98EF-4673-83AC-328B9B5F1D6A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D41C1F5C-0540-48A0-B906-16742A22B5F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D41C1F5C-0540-48A0-B906-16742A22B5F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D41C1F5C-0540-48A0-B906-16742A22B5F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D41C1F5C-0540-48A0-B906-16742A22B5F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91F42036-AABB-4A41-841E-D2DCD887876D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91F42036-AABB-4A41-841E-D2DCD887876D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91F42036-AABB-4A41-841E-D2DCD887876D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91F42036-AABB-4A41-841E-D2DCD887876D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -39,7 +40,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{277729BC-FD5E-4ABE-9B9D-497339136803} = {44E5474F-E747-4C6B-8EC3-3FA2137B28F1}
 		{ADB86DF0-98EF-4673-83AC-328B9B5F1D6A} = {277729BC-FD5E-4ABE-9B9D-497339136803}
-		{D41C1F5C-0540-48A0-B906-16742A22B5F4} = {277729BC-FD5E-4ABE-9B9D-497339136803}
+		{91F42036-AABB-4A41-841E-D2DCD887876D} = {44E5474F-E747-4C6B-8EC3-3FA2137B28F1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5A05C3FD-C97A-4459-9483-49BE1A295C89}

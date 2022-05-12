@@ -72,21 +72,21 @@ namespace QWeatherAPI.Result.RealTimeWeather
 
         public Now(JToken token)
         {
-            this.ObsTime = token.Value<string>("obsTime");
-            this.Temp = token.Value<string>("temp");
-            this.FeelsLike = token.Value<string>("feelsLike");
-            this.Icon = token.Value<string>("icon");
-            this.Text = token.Value<string>("text");
-            this.Wind360 = token.Value<string>("wind360");
-            this.WindDir = token.Value<string>("windDir");
-            this.WindScale = token.Value<string>("windScale");
-            this.WindSpeed = token.Value<string>("windSpeed");
-            this.Humidity = token.Value<string>("humidity");
-            this.Precip = token.Value<string>("precip");
-            this.Pressure = token.Value<string>("pressure");
-            this.Vis = token.Value<string>("vis");
-            this.Cloud = token.Value<string?>("cloud");
-            this.Dew = token.Value<string?>("dew");
+            ObsTime = token.Value<string>("obsTime");
+            Temp = token.Value<string>("temp");
+            FeelsLike = token.Value<string>("feelsLike");
+            Icon = token.Value<string>("icon");
+            Text = token.Value<string>("text");
+            Wind360 = token.Value<string>("wind360");
+            WindDir = token.Value<string>("windDir");
+            WindScale = token.Value<string>("windScale");
+            WindSpeed = token.Value<string>("windSpeed");
+            Humidity = token.Value<string>("humidity");
+            Precip = token.Value<string>("precip");
+            Pressure = token.Value<string>("pressure");
+            Vis = token.Value<string>("vis");
+            Cloud = token.Value<string>("cloud");
+            Dew = token.Value<string>("dew");
         }
     }
 }

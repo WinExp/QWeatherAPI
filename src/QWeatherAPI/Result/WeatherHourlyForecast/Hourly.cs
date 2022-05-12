@@ -64,20 +64,20 @@ namespace QWeatherAPI.Result.WeatherHourlyForecast
 
         public Hourly(JToken token)
         {
-            this.FxTime = token.Value<string>("fxTime");
-            this.Temp = token.Value<string>("temp");
-            this.Icon = token.Value<string>("icon");
-            this.Text = token.Value<string>("text");
-            this.Wind360 = token.Value<string>("wind360");
-            this.WindDir = token.Value<string>("windDir");
-            this.WindScale = new WindScale(token.Value<string>("windScale"));
-            this.WindSpeed = token.Value<string>("windSpeed");
-            this.Humidity = token.Value<string>("humidity");
-            this.Pop = token.Value<string>("pop");
-            this.Precip = token.Value<string>("precip");
-            this.Pressure = token.Value<string>("pressure");
-            this.Cloud = token.Value<string?>("cloud");
-            this.Dew = token.Value<string?>("dew");
+            FxTime = token.Value<string>("fxTime");
+            Temp = token.Value<string>("temp");
+            Icon = token.Value<string>("icon");
+            Text = token.Value<string>("text");
+            Wind360 = token.Value<string>("wind360");
+            WindDir = token.Value<string>("windDir");
+            WindScale = new WindScale(token.Value<string>("windScale"));
+            WindSpeed = token.Value<string>("windSpeed");
+            Humidity = token.Value<string>("humidity");
+            Pop = token.Value<string>("pop");
+            Precip = token.Value<string>("precip");
+            Pressure = token.Value<string>("pressure");
+            Cloud = token.Value<string>("cloud");
+            Dew = token.Value<string>("dew");
         }
     }
 }

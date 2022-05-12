@@ -18,7 +18,6 @@ namespace QWeatherAPI
         /// <param name="lat">地区纬度。</param>
         /// <param name="key">和风天气 API 密钥。</param>
         /// <param name="unit">测量单位，Tools.Units.Metric 为公制，Tools.Units.Inch 为英制，默认采用 公制。</param>
-        /// <param name="duration">预报时长，默认为 24 小时。</param>
         /// <param name="lang">返回数据语言，默认采用中文。详情请参考：https://dev.qweather.com/docs/resource/language/</param>
         /// <returns>实时天气 API 返回数据。</returns>
         public static async Task<WeatherResult> GetHourlyForecastWeatherAsync(double lon, double lat, string key, Units unit = Units.Metric, string lang = "zh")
@@ -47,7 +46,6 @@ namespace QWeatherAPI
         /// <param name="id">地区 LocationID，可通过 GeoAPI.GetGeoAsync() 来获取。</param>
         /// <param name="key">和风天气 API 密钥。</param>
         /// <param name="unit">测量单位，Tools.Units.Metric 为公制，Tools.Units.Inch 为英制，默认采用 公制。</param>
-        /// <param name="duration">预报时长，默认为 24 小时。</param>
         /// <param name="lang">返回数据语言，默认采用中文。详情请参考：https://dev.qweather.com/docs/resource/language/</param>
         /// <returns>实时天气 API 返回数据。</returns>
         public static async Task<WeatherResult> GetHourlyForecastWeatherAsync(string id, string key, Units unit = Units.Metric, string lang = "zh")
