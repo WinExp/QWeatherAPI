@@ -26,13 +26,14 @@ namespace QWeatherAPI.Result.WeatherWarning
         /// </summary>
         public Warning[] Warning;
 
-        public WarningResult(JToken token)
+        public WarningResult(string jsonString)
         {
-            Code = token.Value<string>("code");
-            UpdateTime = token.Value<string>("updateTime");
-            FxLink = token.Value<string>("fxLink");
+            JObject jsonData = JObject.Parse(jsonString);
+            Code = jsonData.Value<string>("code");
+            UpdateTime = jsonData.Value<string>("updateTime");
+            FxLink = jsonData.Value<string>("fxLink");
             List<Warning> warnings = new List<Warning>();
-            foreach (var warning in token.SelectToken("warning"))
+            foreach (var warning in jsonData.SelectToken("warning"))
             {
                 warnings.Add(new Warning(warning));
             }

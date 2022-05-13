@@ -18,6 +18,7 @@
                 var locationInfo = (await QWeatherAPI.GeoAPI.GetGeoAsync(location, key)).Locations[0];
                 var realTimeWeatherInfo = await QWeatherAPI.RealTimeWeatherAPI.GetRealTimeWeatherAsync(locationInfo.Lon, locationInfo.Lat, key);
                 var forecastWeatherInfo = await QWeatherAPI.WeatherDailyForecastAPI.GetWeatherDailyForecastAsync(locationInfo.Lon, locationInfo.Lat, key);
+                var warningResult = await QWeatherAPI.WeatherWarningAPI.GetWeatherWarningAsync(locationInfo.Lon, locationInfo.Lat, key);
                 Console.WriteLine(@$"{locationInfo.Name} 的天气
 当前温度 {realTimeWeatherInfo.Now.Temp}°C
 体感温度 {realTimeWeatherInfo.Now.FeelsLike}°C
@@ -29,6 +30,9 @@
 最低温 {forecastWeatherInfo.Daily[1].TempMin}
 {forecastWeatherInfo.Daily[1].TextDay}
 {forecastWeatherInfo.Daily[1].WindDirDay}
+
+预警类型 {warningResult.Warning[0].TypeName}
+预警级别 {warningResult.Warning[0].Level}
 ");
             }
             catch (ArgumentException ex)
