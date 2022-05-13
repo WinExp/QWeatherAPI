@@ -11,4 +11,9 @@
 	<Deterministic>False</Deterministic>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="QWeatherAPI" Version="1.2.0" />
+  </ItemGroup>
+
 </Project>
