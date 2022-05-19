@@ -16,7 +16,7 @@ namespace QWeatherAPI.Result.GeoAPI.CityLookup
         /// <summary>
         /// 位置搜索结果
         /// </summary>
-        public Location[] Locations = Array.Empty<Location>();
+        public Location[] Locations = new Location[0];
 
         /// <summary>
         /// 构造地理位置 API 返回结果

@@ -24,7 +24,7 @@ namespace QWeatherAPI.Result.WeatherHourlyForecast
         /// <summary>
         /// 24 小时预报结果
         /// </summary>
-        public Hourly[] Hourly = Array.Empty<Hourly>();
+        public Hourly[] Hourly = new Hourly[0];
 
         /// <summary>
         /// 构造 24 天气预报 API 返回结果

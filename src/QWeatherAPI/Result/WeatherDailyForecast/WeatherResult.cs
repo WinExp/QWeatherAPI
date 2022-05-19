@@ -24,7 +24,7 @@ namespace QWeatherAPI.Result.WeatherDailyForecast
         /// <summary>
         /// 逐天天气预报
         /// </summary>
-        public Daily[] Daily = Array.Empty<Daily>();
+        public Daily[] Daily = new Daily[0];
 
         internal WeatherResult(string jsonString)
         {
